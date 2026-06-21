@@ -2,77 +2,106 @@
 .overlay {
   position: fixed;
   inset: 0;
-  background: rgba(0, 0, 0, 0.55);
-  backdrop-filter: blur(4px);
+  background: rgba(0, 0, 0, 0.65);
+  backdrop-filter: blur(8px);
   z-index: 2000;
   display: flex;
   align-items: center;
   justify-content: center;
   padding: 1rem;
-  animation: fadeIn 0.25s ease;
+  animation: fadeIn 0.3s ease;
 }
 
 /* ─── Modal card ───────────────────────────────────────────────── */
 .modal {
   background: #ffffff;
-  border-radius: 12px;
+  border-radius: 20px;
   width: 100%;
-  max-width: 440px;
+  max-width: 500px;
   position: relative;
-  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.28);
-  animation: slideUp 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0 32px 80px rgba(0, 0, 0, 0.35), 0 0 0 1px rgba(255,255,255,0.08);
+  animation: slideUp 0.4s cubic-bezier(0.16, 1, 0.3, 1);
   max-height: 92vh;
   overflow-y: auto;
   overflow-x: hidden;
 }
 
-/* Dark theme override */
 [data-theme="dark"] .modal {
-  background: #1e293b;
+  background: #0f172a;
+  box-shadow: 0 32px 80px rgba(0, 0, 0, 0.6), 0 0 0 1px rgba(255,255,255,0.06);
 }
 
-/* ─── Blue header banner ───────────────────────────────────────── */
+/* ─── Header banner ────────────────────────────────────────────── */
 .headerBanner {
-  background: linear-gradient(135deg, #2e4bbd 0%, #4b55c6 60%, #3a7bd5 100%);
+  background: linear-gradient(135deg, #2563eb 0%, #4b55c6 50%, #7c3aed 100%);
   color: #fff;
-  padding: 18px 48px 18px 20px;
-  font-size: 0.95rem;
-  font-weight: 600;
+  padding: 22px 52px 22px 24px;
+  font-size: 1rem;
+  font-weight: 700;
   display: flex;
   align-items: center;
-  gap: 10px;
-  border-radius: 12px 12px 0 0;
+  gap: 12px;
+  border-radius: 20px 20px 0 0;
   line-height: 1.4;
   letter-spacing: 0.01em;
+  position: relative;
+  overflow: hidden;
+}
+
+.headerBanner::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: radial-gradient(circle at 80% 50%, rgba(255,255,255,0.12) 0%, transparent 60%);
+  pointer-events: none;
+}
+
+.headerBanner::after {
+  content: '';
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
 }
 
 .bannerIcon {
-  font-size: 1.2rem;
+  font-size: 1.5rem;
   flex-shrink: 0;
+  filter: drop-shadow(0 2px 4px rgba(0,0,0,0.2));
+}
+
+/* ─── Subtitle inside header ───────────────────────────────────── */
+.headerSub {
+  font-size: 0.78rem;
+  opacity: 0.8;
+  font-weight: 500;
+  margin-top: 2px;
 }
 
 /* ─── Close button ─────────────────────────────────────────────── */
 .close {
   position: absolute;
-  top: 12px;
-  right: 14px;
-  width: 30px;
-  height: 30px;
+  top: 14px;
+  right: 16px;
+  width: 32px;
+  height: 32px;
   border-radius: 50%;
-  background: rgba(255, 255, 255, 0.22);
+  background: rgba(255, 255, 255, 0.18);
   color: #fff;
-  font-size: 0.85rem;
+  font-size: 0.9rem;
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: background 0.2s, transform 0.2s;
-  border: none;
+  transition: background 0.2s, transform 0.25s;
+  border: 1px solid rgba(255,255,255,0.25);
   cursor: pointer;
   z-index: 10;
 }
 .close:hover {
-  background: rgba(255, 255, 255, 0.4);
-  transform: rotate(90deg);
+  background: rgba(255, 255, 255, 0.35);
+  transform: rotate(90deg) scale(1.1);
 }
 
 /* ─── Form ─────────────────────────────────────────────────────── */
@@ -80,133 +109,215 @@
   display: flex;
   flex-direction: column;
   gap: 14px;
-  padding: 22px 22px 18px;
+  padding: 24px 24px 20px;
+}
+
+/* ─── Two-column grid for first 3 fields ──────────────────────── */
+.formGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
 }
 
 .field {
   display: flex;
   flex-direction: column;
-  gap: 5px;
+  gap: 6px;
 }
 
 .field label {
-  font-size: 0.82rem;
-  font-weight: 600;
+  font-size: 0.78rem;
+  font-weight: 700;
   color: #374151;
-  letter-spacing: 0.01em;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  gap: 5px;
 }
 
 [data-theme="dark"] .field label {
   color: #94a3b8;
 }
 
+.fieldIcon {
+  font-size: 0.85rem;
+}
+
 .field input,
 .field select {
   width: 100%;
-  padding: 11px 13px;
-  border: 1.5px solid #d1d5db;
-  border-radius: 8px;
-  background: #ffffff;
+  padding: 11px 14px;
+  border: 1.5px solid #e5e7eb;
+  border-radius: 10px;
+  background: #f9fafb;
   color: #111827;
-  font-size: 0.9rem;
+  font-size: 0.88rem;
   outline: none;
-  transition: border-color 0.2s, box-shadow 0.2s;
+  transition: border-color 0.2s, box-shadow 0.2s, background 0.2s;
   box-sizing: border-box;
   font-family: inherit;
 }
 
 [data-theme="dark"] .field input,
 [data-theme="dark"] .field select {
-  background: #0f172a;
+  background: #1e293b;
   border-color: #334155;
   color: #f1f5f9;
 }
 
 .field input::placeholder {
   color: #9ca3af;
+  font-size: 0.85rem;
 }
 
 .field input:focus,
 .field select:focus {
   border-color: #4b55c6;
-  box-shadow: 0 0 0 3px rgba(75, 85, 198, 0.14);
+  box-shadow: 0 0 0 3px rgba(75, 85, 198, 0.15);
+  background: #ffffff;
+}
+
+[data-theme="dark"] .field input:focus,
+[data-theme="dark"] .field select:focus {
+  background: #0f172a;
 }
 
 .inputError {
   border-color: #ef4444 !important;
-  box-shadow: 0 0 0 3px rgba(239, 68, 68, 0.1) !important;
+  box-shadow: 0 0 0 3px rgba(239, 68, 68, 0.12) !important;
 }
 
 .errMsg {
-  font-size: 0.75rem;
+  font-size: 0.72rem;
   color: #ef4444;
-  margin-top: 2px;
+  margin-top: 1px;
+  display: flex;
+  align-items: center;
+  gap: 3px;
+}
+
+/* ─── Divider ──────────────────────────────────────────────────── */
+.divider {
+  height: 1px;
+  background: linear-gradient(90deg, transparent, #e5e7eb, transparent);
+  margin: 2px 0;
+}
+
+[data-theme="dark"] .divider {
+  background: linear-gradient(90deg, transparent, #334155, transparent);
 }
 
 /* ─── Button row ───────────────────────────────────────────────── */
 .btnRow {
   display: flex;
   gap: 12px;
-  margin-top: 4px;
+  margin-top: 6px;
 }
 
 .closeBtn {
-  flex: 1;
-  padding: 12px;
-  border-radius: 8px;
-  background: #d17226;
-  color: #fff;
-  font-size: 0.92rem;
-  font-weight: 700;
-  border: none;
+  flex: 0 0 auto;
+  padding: 12px 22px;
+  border-radius: 10px;
+  background: transparent;
+  color: #6b7280;
+  font-size: 0.88rem;
+  font-weight: 600;
+  border: 1.5px solid #e5e7eb;
   cursor: pointer;
-  transition: background 0.2s, transform 0.15s;
+  transition: all 0.2s;
   font-family: inherit;
 }
 .closeBtn:hover {
-  background: #b86320;
-  transform: translateY(-1px);
+  background: #f3f4f6;
+  color: #374151;
+  border-color: #d1d5db;
+}
+
+[data-theme="dark"] .closeBtn {
+  color: #94a3b8;
+  border-color: #334155;
+}
+[data-theme="dark"] .closeBtn:hover {
+  background: #1e293b;
+  color: #e2e8f0;
 }
 
 .submitBtn {
   flex: 1;
-  padding: 12px;
-  border-radius: 8px;
-  background: #d17226;
+  padding: 13px 20px;
+  border-radius: 10px;
+  background: linear-gradient(135deg, #4b55c6 0%, #7c3aed 100%);
   color: #fff;
   font-size: 0.92rem;
   font-weight: 700;
   border: none;
   cursor: pointer;
-  transition: background 0.2s, transform 0.15s, box-shadow 0.2s;
-  box-shadow: 0 4px 14px rgba(209, 114, 38, 0.35);
+  transition: all 0.25s;
+  box-shadow: 0 4px 16px rgba(75, 85, 198, 0.4);
   font-family: inherit;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  letter-spacing: 0.02em;
 }
 .submitBtn:hover {
-  background: #b86320;
   transform: translateY(-2px);
-  box-shadow: 0 8px 20px rgba(209, 114, 38, 0.45);
+  box-shadow: 0 8px 24px rgba(75, 85, 198, 0.5);
+  background: linear-gradient(135deg, #3b44b0 0%, #6d28d9 100%);
+}
+.submitBtn:active {
+  transform: translateY(0);
+}
+
+/* ─── Privacy note ─────────────────────────────────────────────── */
+.privacyNote {
+  text-align: center;
+  font-size: 0.72rem;
+  color: #9ca3af;
+  margin-top: -4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
 }
 
 /* ─── Success state ────────────────────────────────────────────── */
 .success {
   text-align: center;
-  padding: 48px 24px 40px;
+  padding: 56px 32px 48px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
 }
 .successIcon {
-  font-size: 3.5rem;
-  margin-bottom: 16px;
-  animation: bounceIn 0.5s ease;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #22c55e, #16a34a);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2.2rem;
+  margin-bottom: 8px;
+  box-shadow: 0 8px 32px rgba(34, 197, 94, 0.35);
+  animation: bounceIn 0.5s cubic-bezier(0.16, 1, 0.3, 1);
 }
 .success h3 {
-  font-size: 1.5rem;
+  font-size: 1.6rem;
   font-weight: 800;
-  color: #22c55e;
-  margin-bottom: 8px;
+  color: #111827;
+  margin: 0;
 }
+[data-theme="dark"] .success h3 { color: #f1f5f9; }
 .success p {
-  color: #64748b;
+  color: #6b7280;
   font-size: 0.95rem;
+  max-width: 280px;
+  line-height: 1.6;
+  margin: 0;
 }
 
 /* ─── Animations ───────────────────────────────────────────────── */
@@ -216,26 +327,26 @@
 }
 
 @keyframes slideUp {
-  from { opacity: 0; transform: translateY(36px) scale(0.97); }
+  from { opacity: 0; transform: translateY(40px) scale(0.96); }
   to   { opacity: 1; transform: translateY(0) scale(1); }
 }
 
 @keyframes bounceIn {
-  0%   { transform: scale(0); }
-  60%  { transform: scale(1.2); }
-  100% { transform: scale(1); }
+  0%   { transform: scale(0); opacity: 0; }
+  70%  { transform: scale(1.15); }
+  100% { transform: scale(1); opacity: 1; }
 }
 
 /* ─── Mobile ───────────────────────────────────────────────────── */
-@media (max-width: 480px) {
+@media (max-width: 520px) {
   .modal {
     max-width: 100%;
-    border-radius: 16px 16px 0 0;
+    border-radius: 20px 20px 0 0;
     position: fixed;
     bottom: 0;
     left: 0;
     right: 0;
-    max-height: 95vh;
+    max-height: 96vh;
     animation: slideUpMobile 0.35s cubic-bezier(0.16, 1, 0.3, 1);
   }
 
@@ -245,7 +356,11 @@
   }
 
   .form {
-    padding: 18px 16px 20px;
+    padding: 18px 16px 24px;
+  }
+
+  .formGrid {
+    grid-template-columns: 1fr;
   }
 }
 

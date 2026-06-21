@@ -173,7 +173,6 @@ export const Home = () => {
               <TiltCard
                 key={t.id}
                 className={`${styles.testimonialCard} reveal reveal-delay-${(i % 3) + 1}`}
-                style={{ marginTop: i % 2 === 1 ? '2rem' : '0' }}
               >
                 <div className={styles.quoteIcon}>"</div>
                 <div className={styles.stars}>{'★'.repeat(t.rating)}</div>

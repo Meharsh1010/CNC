@@ -61,10 +61,13 @@ export const EnquiryModal = ({ isOpen, onClose }) => {
     <div className={styles.overlay} onClick={onClose}>
       <div className={styles.modal} onClick={e => e.stopPropagation()}>
 
-        {/* Blue header banner */}
+        {/* Gradient header banner */}
         <div className={styles.headerBanner}>
-          <span className={styles.bannerIcon}>📋</span>
-          <span>Please fill the Form for Best Course Enquiry</span>
+          <span className={styles.bannerIcon}>🎓</span>
+          <div>
+            <div>Free Course Enquiry</div>
+            <div className={styles.headerSub}>Our expert will call you within 24 hours</div>
+          </div>
         </div>
 
         {/* Close button */}
@@ -72,65 +75,88 @@ export const EnquiryModal = ({ isOpen, onClose }) => {
 
         {submitted ? (
           <div className={styles.success}>
-            <div className={styles.successIcon}>✅</div>
+            <div className={styles.successIcon}>✓</div>
             <h3>Thank You!</h3>
-            <p>Our experts will contact you within 24 hours.</p>
+            <p>Our experts will contact you within 24 hours to guide you.</p>
           </div>
         ) : (
           <form onSubmit={handleSubmit} className={styles.form} noValidate>
 
-            {/* Name */}
-            <div className={styles.field}>
-              <label htmlFor="enq-name">Name</label>
-              <input
-                id="enq-name" type="text" name="name"
-                value={formData.name} onChange={handleChange}
-                placeholder="Name"
-                className={errors.name ? styles.inputError : ''}
-              />
-              {errors.name && <span className={styles.errMsg}>{errors.name}</span>}
+            {/* Row 1: Name + Phone */}
+            <div className={styles.formGrid}>
+              <div className={styles.field}>
+                <label htmlFor="enq-name">
+                  <span className={styles.fieldIcon}>👤</span> Name
+                </label>
+                <input
+                  id="enq-name" type="text" name="name"
+                  value={formData.name} onChange={handleChange}
+                  placeholder="Your full name"
+                  className={errors.name ? styles.inputError : ''}
+                />
+                {errors.name && <span className={styles.errMsg}>⚠ {errors.name}</span>}
+              </div>
+
+              <div className={styles.field}>
+                <label htmlFor="enq-phone">
+                  <span className={styles.fieldIcon}>📞</span> Phone
+                </label>
+                <input
+                  id="enq-phone" type="tel" name="phone"
+                  value={formData.phone} onChange={handleChange}
+                  placeholder="+91 98765 43210"
+                  className={errors.phone ? styles.inputError : ''}
+                />
+                {errors.phone && <span className={styles.errMsg}>⚠ {errors.phone}</span>}
+              </div>
             </div>
 
-            {/* Email */}
+            {/* Email (full width) */}
             <div className={styles.field}>
-              <label htmlFor="enq-email">Email</label>
+              <label htmlFor="enq-email">
+                <span className={styles.fieldIcon}>✉️</span> Email Address
+              </label>
               <input
                 id="enq-email" type="email" name="email"
                 value={formData.email} onChange={handleChange}
-                placeholder="Email"
+                placeholder="you@example.com"
                 className={errors.email ? styles.inputError : ''}
               />
-              {errors.email && <span className={styles.errMsg}>{errors.email}</span>}
+              {errors.email && <span className={styles.errMsg}>⚠ {errors.email}</span>}
             </div>
 
-            {/* Contact Number */}
-            <div className={styles.field}>
-              <label htmlFor="enq-phone">Contact Number</label>
-              <input
-                id="enq-phone" type="tel" name="phone"
-                value={formData.phone} onChange={handleChange}
-                placeholder="Contact Number"
-                className={errors.phone ? styles.inputError : ''}
-              />
-              {errors.phone && <span className={styles.errMsg}>{errors.phone}</span>}
+            {/* Row 2: Country + Course */}
+            <div className={styles.formGrid}>
+              <div className={styles.field}>
+                <label htmlFor="enq-country">
+                  <span className={styles.fieldIcon}>🌍</span> Country
+                </label>
+                <select id="enq-country" name="country" value={formData.country} onChange={handleChange}>
+                  <option value="">Select Country</option>
+                  {COUNTRIES.map(c => <option key={c} value={c}>{c}</option>)}
+                </select>
+              </div>
+
+              <div className={styles.field}>
+                <label htmlFor="enq-hear">
+                  <span className={styles.fieldIcon}>📣</span> Heard Via
+                </label>
+                <select id="enq-hear" name="hearAbout" value={formData.hearAbout} onChange={handleChange}>
+                  <option value="">Select</option>
+                  {HEAR_ABOUT.map(h => <option key={h} value={h}>{h}</option>)}
+                </select>
+              </div>
             </div>
 
-            {/* Country */}
+            {/* Course interest */}
             <div className={styles.field}>
-              <label htmlFor="enq-country">Country</label>
-              <select id="enq-country" name="country" value={formData.country} onChange={handleChange}>
-                <option value="">Select Country</option>
-                {COUNTRIES.map(c => <option key={c} value={c}>{c}</option>)}
-              </select>
-            </div>
-
-            {/* Courses */}
-            <div className={styles.field}>
-              <label htmlFor="enq-course">Courses (Technology)</label>
+              <label htmlFor="enq-course">
+                <span className={styles.fieldIcon}>💻</span> Course / Technology Interested In
+              </label>
               <input
                 id="enq-course" type="text" name="course"
                 value={formData.course} onChange={handleChange}
-                placeholder="Courses (Technology)"
+                placeholder="e.g. CCNA, Ethical Hacking, AWS…"
                 list="course-list"
               />
               <datalist id="course-list">
@@ -138,20 +164,17 @@ export const EnquiryModal = ({ isOpen, onClose }) => {
               </datalist>
             </div>
 
-            {/* How do you know about us */}
-            <div className={styles.field}>
-              <label htmlFor="enq-hear">How do you know about us?</label>
-              <select id="enq-hear" name="hearAbout" value={formData.hearAbout} onChange={handleChange}>
-                <option value="">Select</option>
-                {HEAR_ABOUT.map(h => <option key={h} value={h}>{h}</option>)}
-              </select>
-            </div>
+            <div className={styles.divider} />
 
             {/* Buttons */}
             <div className={styles.btnRow}>
-              <button type="button" className={styles.closeBtn} onClick={onClose}>Close</button>
-              <button type="submit" className={styles.submitBtn}>Submit</button>
+              <button type="button" className={styles.closeBtn} onClick={onClose}>Cancel</button>
+              <button type="submit" className={styles.submitBtn}>
+                🚀 Submit Enquiry
+              </button>
             </div>
+
+            <p className={styles.privacyNote}>🔒 Your details are safe. No spam, ever.</p>
 
           </form>
         )}

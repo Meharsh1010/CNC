@@ -1,4 +1,4 @@
-import React, { useState, useContext } from 'react';
+import React, { useState, useContext, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { CoursesContext } from '../context/CoursesContext';
 import { TestimonialsContext } from '../context/TestimonialsContext';
@@ -34,6 +34,12 @@ export const Home = () => {
   const navigate = useNavigate();
   const [modalOpen, setModalOpen] = useState(false);
   useScrollReveal();
+
+  // Auto-open enquiry modal on every page load / refresh
+  useEffect(() => {
+    const timer = setTimeout(() => setModalOpen(true), 1500);
+    return () => clearTimeout(timer);
+  }, []);
 
   const featuredCourses = allCourses.slice(0, 6);
 

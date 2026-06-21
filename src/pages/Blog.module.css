@@ -1,0 +1,72 @@
+.page { min-height: 100vh; background: var(--bg); }
+.body { display: flex; flex-direction: column; gap: 40px; }
+
+.filters { display: flex; flex-wrap: wrap; gap: 10px; }
+.filterBtn {
+  padding: 8px 18px; border-radius: 999px;
+  font-size: 0.85rem; font-weight: 600;
+  background: var(--bg-card); color: var(--text-secondary);
+  border: 1.5px solid var(--border); transition: var(--transition);
+}
+.filterBtn:hover { border-color: var(--brand-blue); color: var(--brand-blue); }
+.filterActive { background: var(--brand-blue) !important; color: #fff !important; border-color: var(--brand-blue) !important; }
+
+.grid {
+  display: grid; grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+}
+.blogCard {
+  background: var(--bg-card); border: 1px solid var(--border);
+  border-radius: 20px; overflow: hidden;
+  box-shadow: var(--shadow-lg); display: flex;
+  flex-direction: column; transition: var(--transition);
+}
+.blogCard:hover { border-color: var(--brand-blue); box-shadow: var(--shadow-glow); }
+
+.blogImg {
+  height: 180px; display: flex;
+  align-items: center; justify-content: center;
+}
+.blogImgIcon { font-size: 3.5rem; }
+
+.blogBody { padding: 24px; display: flex; flex-direction: column; gap: 12px; flex: 1; }
+
+.blogMeta { display: flex; align-items: center; justify-content: space-between; }
+.blogCat {
+  font-size: 0.72rem; font-weight: 700;
+  padding: 4px 10px; border-radius: 999px;
+  text-transform: uppercase; letter-spacing: 0.06em;
+}
+.blogDate { font-size: 0.78rem; color: var(--text-muted); }
+
+.blogTitle {
+  font-size: 1.05rem; font-weight: 700;
+  color: var(--text-primary); line-height: 1.4; margin: 0;
+}
+.blogExcerpt {
+  font-size: 0.85rem; color: var(--text-muted);
+  line-height: 1.65; flex: 1; margin: 0;
+}
+
+.blogFooter {
+  display: flex; align-items: center;
+  justify-content: space-between;
+  padding-top: 12px; border-top: 1px solid var(--border);
+}
+.blogAuthor { display: flex; align-items: center; gap: 8px; }
+.authorAvatar {
+  width: 30px; height: 30px; border-radius: 50%;
+  color: #fff; font-size: 0.7rem; font-weight: 800;
+  display: flex; align-items: center; justify-content: center;
+}
+.blogAuthor span { font-size: 0.82rem; font-weight: 600; color: var(--text-secondary); }
+
+.readBtn {
+  font-size: 0.82rem; font-weight: 700;
+  background: none; border: none; cursor: pointer;
+  transition: var(--transition);
+}
+.readBtn:hover { transform: translateX(4px); }
+
+@media (max-width: 1024px) { .grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 640px) { .grid { grid-template-columns: 1fr; } }

@@ -1,0 +1,68 @@
+[
+  {
+    "id": 1,
+    "title": "Understanding CCNA Certification Path",
+    "slug": "understanding-ccna-certification",
+    "category": "Networking",
+    "author": "John Smith",
+    "date": "2024-01-15",
+    "excerpt": "A comprehensive guide to CCNA certification and career path.",
+    "content": "The Cisco Certified Network Associate (CCNA) certification is one of the most sought-after credentials in the networking industry. This guide will walk you through everything you need to know about preparing for and passing the CCNA exam. From understanding the exam structure to study tips and resources, we cover it all.",
+    "image": "https://via.placeholder.com/400x300?text=CCNA+Guide"
+  },
+  {
+    "id": 2,
+    "title": "Best Practices for Network Security",
+    "slug": "network-security-best-practices",
+    "category": "Security",
+    "author": "Sarah Johnson",
+    "date": "2024-01-20",
+    "excerpt": "Essential security practices for modern networks.",
+    "content": "Network security is more critical than ever. In this blog, we discuss the top security practices that every network administrator should implement. From firewall configuration to intrusion detection systems, learn how to protect your organization's network infrastructure.",
+    "image": "https://via.placeholder.com/400x300?text=Network+Security"
+  },
+  {
+    "id": 3,
+    "title": "Getting Started with Python for Network Automation",
+    "slug": "python-network-automation",
+    "category": "Automation",
+    "author": "Mike Davis",
+    "date": "2024-01-25",
+    "excerpt": "Learn how to automate network tasks using Python.",
+    "content": "Python has become the de facto language for network automation. This comprehensive guide will help you get started with Python for automating your network tasks. We'll cover network libraries, APIs, and practical examples to help you boost your productivity.",
+    "image": "https://via.placeholder.com/400x300?text=Python+Automation"
+  },
+  {
+    "id": 4,
+    "title": "Data Center Networking Fundamentals",
+    "slug": "data-center-networking",
+    "category": "DataCenter",
+    "author": "Emily White",
+    "date": "2024-02-01",
+    "excerpt": "Master the basics of modern data center networking.",
+    "content": "Data center networking is evolving rapidly. Understand the fundamentals of modern data center architecture, including spine-leaf topology, VXLAN, and overlay networking. This guide provides insights into designing scalable and resilient data center networks.",
+    "image": "https://via.placeholder.com/400x300?text=Data+Center"
+  },
+  {
+    "id": 5,
+    "title": "CCIE Career Opportunities and Salary",
+    "slug": "ccie-career-salary",
+    "category": "Networking",
+    "author": "Robert Brown",
+    "date": "2024-02-05",
+    "excerpt": "Explore CCIE career prospects and salary expectations.",
+    "content": "The CCIE certification opens doors to lucrative career opportunities. In this article, we explore the salary expectations, job roles, and career growth opportunities for CCIE certified professionals. Learn why investing in CCIE certification can be a game-changer for your career.",
+    "image": "https://via.placeholder.com/400x300?text=CCIE+Career"
+  },
+  {
+    "id": 6,
+    "title": "Web Development Trends for 2024",
+    "slug": "web-development-trends-2024",
+    "category": "WebDevelopment",
+    "author": "Lisa Chen",
+    "date": "2024-02-10",
+    "excerpt": "Stay updated with the latest web development trends.",
+    "content": "The web development landscape is constantly evolving. Discover the latest trends and technologies that are shaping the future of web development in 2024. From AI integration to edge computing, learn what's next in the world of web development.",
+    "image": "https://via.placeholder.com/400x300?text=Web+Trends"
+  }
+]

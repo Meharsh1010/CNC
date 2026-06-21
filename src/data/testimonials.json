@@ -1,0 +1,56 @@
+[
+  {
+    "id": 1,
+    "name": "Rajesh Kumar",
+    "title": "Network Engineer at TCS",
+    "company": "TCS",
+    "review": "The CCNA training was excellent! The instructors were knowledgeable and the hands-on labs really helped me understand the concepts. Highly recommended!",
+    "rating": 5,
+    "image": "https://via.placeholder.com/100?text=RK"
+  },
+  {
+    "id": 2,
+    "name": "Priya Sharma",
+    "title": "Security Analyst at Infosys",
+    "company": "Infosys",
+    "review": "Great course on ethical hacking. The practical approach and real-world scenarios made learning very effective. Got placed in a month!",
+    "rating": 5,
+    "image": "https://via.placeholder.com/100?text=PS"
+  },
+  {
+    "id": 3,
+    "name": "Amit Patel",
+    "title": "Senior Network Admin at Accenture",
+    "company": "Accenture",
+    "review": "CCNP course was incredibly comprehensive. The trainers answered all my questions and the lab environment was exactly like the real exam. Worth every penny!",
+    "rating": 5,
+    "image": "https://via.placeholder.com/100?text=AP"
+  },
+  {
+    "id": 4,
+    "name": "Neha Gupta",
+    "title": "DevOps Engineer at HCL",
+    "company": "HCL",
+    "review": "Excellent DevNet training! Loved the automation projects. The trainers have real industry experience and it shows in their teaching.",
+    "rating": 5,
+    "image": "https://via.placeholder.com/100?text=NG"
+  },
+  {
+    "id": 5,
+    "name": "Sanjay Singh",
+    "title": "Firewall Administrator at Capgemini",
+    "company": "Capgemini",
+    "review": "Palo Alto training was top-notch. Learned a lot about advanced security policies and threat prevention. Highly skilled instructors!",
+    "rating": 5,
+    "image": "https://via.placeholder.com/100?text=SS"
+  },
+  {
+    "id": 6,
+    "name": "Anjali Verma",
+    "title": "Web Developer at Flipkart",
+    "company": "Flipkart",
+    "review": "JavaScript course was perfect for beginners like me. The project-based learning approach made concepts stick. Now working as a full-stack developer!",
+    "rating": 5,
+    "image": "https://via.placeholder.com/100?text=AV"
+  }
+]

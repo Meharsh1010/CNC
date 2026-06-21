@@ -1,0 +1,107 @@
+.page { min-height: 100vh; background: var(--bg); }
+.sectionHead { margin-bottom: 0; }
+.sectionHead h2 { font-size: clamp(1.6rem, 3vw, 2.5rem); font-weight: 800; color: var(--text-primary); margin: 8px 0; }
+.sectionHead p { color: var(--text-muted); }
+
+/* Stats */
+.statsSection { background: var(--bg-section); }
+.statsGrid {
+  display: grid; grid-template-columns: repeat(4, 1fr);
+  gap: 24px; margin-top: 48px;
+}
+.statCard {
+  background: var(--bg-card); border: 1px solid var(--border);
+  border-radius: 20px; padding: 36px 24px; text-align: center;
+  box-shadow: var(--shadow-lg);
+}
+.statIcon {
+  width: 64px; height: 64px; border-radius: 16px;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 1.8rem; margin: 0 auto 20px;
+}
+.statNum { font-size: 2.8rem; font-weight: 900; letter-spacing: -0.02em; margin-bottom: 6px; }
+.statLabel { font-size: 0.82rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: var(--text-muted); margin: 0; }
+
+/* Stories */
+.storiesSection { background: var(--bg); }
+.storiesGrid {
+  display: grid; grid-template-columns: repeat(3, 1fr);
+  gap: 24px; margin-top: 48px; align-items: start;
+}
+.storyCard {
+  background: var(--bg-card); border: 1px solid var(--border);
+  border-radius: 24px; padding: 32px;
+  box-shadow: var(--shadow-lg); display: flex;
+  flex-direction: column; gap: 14px; position: relative; overflow: hidden;
+}
+.storyQuote {
+  position: absolute; top: -10px; right: 16px;
+  font-size: 8rem; color: var(--border);
+  line-height: 1; font-family: Georgia, serif;
+  pointer-events: none;
+}
+.storyStars { color: #facc15; font-size: 0.9rem; letter-spacing: 2px; position: relative; z-index: 1; }
+.storyReview {
+  font-size: 0.92rem; color: var(--text-secondary);
+  line-height: 1.75; font-style: italic; flex: 1;
+  position: relative; z-index: 1; margin: 0;
+}
+.storyAuthor {
+  display: flex; align-items: center; gap: 12px;
+  background: var(--bg-section); border: 1px solid var(--border);
+  border-radius: 14px; padding: 12px 14px; position: relative; z-index: 1;
+}
+.storyAvatar {
+  width: 40px; height: 40px; border-radius: 50%;
+  background: linear-gradient(135deg, var(--brand-blue), #6366f1);
+  color: #fff; font-weight: 800; font-size: 0.85rem;
+  display: flex; align-items: center; justify-content: center; flex-shrink: 0;
+}
+.storyAuthor strong { display: block; font-size: 0.88rem; color: var(--text-primary); }
+.storyJourney { display: block; font-size: 0.72rem; color: var(--brand-blue); font-weight: 700; }
+.storyCompany { display: block; font-size: 0.72rem; color: var(--brand-orange); font-weight: 700; }
+
+/* Placements */
+.placementsSection { background: var(--bg-section); }
+.placementsGrid {
+  display: grid; grid-template-columns: repeat(4, 1fr);
+  gap: 24px; margin-top: 48px;
+}
+.placementCard {
+  background: var(--bg-card); border: 1px solid var(--border);
+  border-radius: 20px; padding: 32px 24px; text-align: center;
+  box-shadow: var(--shadow-md); transition: var(--transition);
+}
+.placementCard:hover { border-color: var(--brand-blue); box-shadow: var(--shadow-glow); }
+.placementIcon { font-size: 2.5rem; margin-bottom: 12px; }
+.placementValue {
+  font-size: 2rem; font-weight: 900; color: var(--brand-blue);
+  margin-bottom: 8px; letter-spacing: -0.02em;
+}
+.placementCard h4 { font-size: 0.95rem; font-weight: 700; color: var(--text-primary); margin-bottom: 6px; }
+.placementCard p { font-size: 0.82rem; color: var(--text-muted); margin: 0; }
+
+/* Marquee */
+.marqueeSection {
+  background: var(--bg-card);
+  border-top: 1px solid var(--border);
+  padding: 48px 0; overflow: hidden;
+}
+.marqueeLabel { margin-bottom: 24px; }
+.marqueeLabel p { font-size: 0.8rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; color: var(--text-muted); margin: 0; }
+.marqueeTrack { overflow: hidden; }
+.marqueeInner { display: flex; animation: marquee 22s linear infinite; width: max-content; }
+.marqueeItem {
+  display: inline-flex; align-items: center;
+  padding: 10px 40px; font-weight: 800; font-size: 1rem;
+  color: var(--text-muted); letter-spacing: 0.08em;
+  text-transform: uppercase; border-right: 1px solid var(--border);
+}
+
+@media (max-width: 1024px) {
+  .statsGrid, .placementsGrid { grid-template-columns: repeat(2, 1fr); }
+  .storiesGrid { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 640px) {
+  .storiesGrid { grid-template-columns: 1fr; }
+}

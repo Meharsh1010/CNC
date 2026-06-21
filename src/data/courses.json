@@ -1,0 +1,303 @@
+{
+  "Enterprise": [
+    {
+      "id": "ccna",
+      "name": "CCNA (Cisco Certified Network Associate)",
+      "category": "Enterprise",
+      "duration": "6 months",
+      "level": "Beginner",
+      "description": "Master the fundamentals of networking with CCNA certification",
+      "features": [
+        "100% Job Assurance",
+        "Expert Trainers",
+        "Real-world Projects",
+        "Lab Practice"
+      ],
+      "syllabus": [
+        "Network Fundamentals",
+        "Network Access",
+        "IP Connectivity",
+        "IP Services",
+        "Security Fundamentals",
+        "Automation and Programmability"
+      ],
+      "trainer": "Senior Networking Engineer",
+      "price": "$500"
+    },
+    {
+      "id": "ccnp",
+      "name": "CCNP (Cisco Certified Network Professional)",
+      "category": "Enterprise",
+      "duration": "8 months",
+      "level": "Advanced",
+      "description": "Advanced networking with CCNP enterprise track",
+      "features": [
+        "100% Job Assurance",
+        "Expert Trainers",
+        "Enterprise Labs",
+        "Real Scenarios"
+      ],
+      "syllabus": [
+        "Enterprise Network Design",
+        "Advanced Routing",
+        "Advanced Switching",
+        "Services Infrastructure",
+        "Enterprise Security"
+      ],
+      "trainer": "CCNP Certified Expert",
+      "price": "$750"
+    },
+    {
+      "id": "ccie",
+      "name": "CCIE Routing & Switching",
+      "category": "Enterprise",
+      "duration": "12 months",
+      "level": "Expert",
+      "description": "Master level certification for network engineers",
+      "features": [
+        "100% Job Assurance",
+        "One-on-One Coaching",
+        "Advanced Labs",
+        "Mock Exams"
+      ],
+      "syllabus": [
+        "Advanced Troubleshooting",
+        "Network Design",
+        "BGP Implementation",
+        "MPLS",
+        "Security Implementation"
+      ],
+      "trainer": "CCIE Certified Instructor",
+      "price": "$1500"
+    },
+    {
+      "id": "sdwan",
+      "name": "SD-WAN Solutions",
+      "category": "Enterprise",
+      "duration": "3 months",
+      "level": "Intermediate",
+      "description": "Modern WAN architecture with SD-WAN",
+      "features": [
+        "Cloud Based Training",
+        "Live Projects",
+        "Expert Support",
+        "Certification Ready"
+      ],
+      "syllabus": [
+        "SD-WAN Architecture",
+        "Cisco Catalyst 8000",
+        "Security in SD-WAN",
+        "Performance Monitoring"
+      ],
+      "trainer": "SD-WAN Specialist",
+      "price": "$400"
+    }
+  ],
+  "Security": [
+    {
+      "id": "ceh",
+      "name": "Certified Ethical Hacker (CEH)",
+      "category": "Security",
+      "duration": "6 months",
+      "level": "Intermediate",
+      "description": "Learn ethical hacking and penetration testing",
+      "features": [
+        "Hands-on Lab",
+        "Real-world Scenarios",
+        "100% Pass Guarantee",
+        "Career Support"
+      ],
+      "syllabus": [
+        "Reconnaissance",
+        "Scanning & Enumeration",
+        "Gaining Access",
+        "Maintaining Access",
+        "Covering Tracks"
+      ],
+      "trainer": "CEH Certified Instructor",
+      "price": "$600"
+    },
+    {
+      "id": "palo-alto",
+      "name": "Palo Alto Networks",
+      "category": "Security",
+      "duration": "4 months",
+      "level": "Intermediate",
+      "description": "Enterprise firewall and security solutions",
+      "features": [
+        "Hands-on Experience",
+        "Lab Environment",
+        "Expert Guidance",
+        "Certification Prep"
+      ],
+      "syllabus": [
+        "Firewall Architecture",
+        "Threat Prevention",
+        "Advanced Policies",
+        "Integration with Threat Intelligence"
+      ],
+      "trainer": "Palo Alto Specialist",
+      "price": "$500"
+    },
+    {
+      "id": "fortigate",
+      "name": "Fortinet FortiGate",
+      "category": "Security",
+      "duration": "4 months",
+      "level": "Intermediate",
+      "description": "Fortinet security platform training",
+      "features": [
+        "Real Appliances",
+        "Security Operations",
+        "Threat Management",
+        "Hands-on Labs"
+      ],
+      "syllabus": [
+        "FortiGate Basics",
+        "Advanced Routing",
+        "FortiOS Configuration",
+        "Security Features"
+      ],
+      "trainer": "Fortinet NSE Trainer",
+      "price": "$450"
+    }
+  ],
+  "DataCenter": [
+    {
+      "id": "aci",
+      "name": "Application Centric Infrastructure (ACI)",
+      "category": "DataCenter",
+      "duration": "5 months",
+      "level": "Advanced",
+      "description": "Cisco ACI for modern data centers",
+      "features": [
+        "Lab Practice",
+        "Real-world Design",
+        "Expert Support",
+        "Placement Assistance"
+      ],
+      "syllabus": [
+        "ACI Fundamentals",
+        "Fabric Architecture",
+        "Policy Model",
+        "Troubleshooting"
+      ],
+      "trainer": "ACI Architect",
+      "price": "$700"
+    },
+    {
+      "id": "nexus",
+      "name": "Cisco Nexus Switches",
+      "category": "DataCenter",
+      "duration": "4 months",
+      "level": "Intermediate",
+      "description": "Data center switching with Cisco Nexus",
+      "features": [
+        "Hands-on Labs",
+        "Performance Tuning",
+        "Security Configuration",
+        "High Availability"
+      ],
+      "syllabus": [
+        "Nexus Platforms",
+        "VLAN & Spanning Tree",
+        "Virtual Switching",
+        "Fabric Extensions"
+      ],
+      "trainer": "Nexus Specialist",
+      "price": "$600"
+    }
+  ],
+  "Automation": [
+    {
+      "id": "devnet",
+      "name": "Cisco DevNet Professional",
+      "category": "Automation",
+      "duration": "4 months",
+      "level": "Intermediate",
+      "description": "Network automation and DevOps",
+      "features": [
+        "Python Programming",
+        "API Development",
+        "Automation Tools",
+        "Real Projects"
+      ],
+      "syllabus": [
+        "Python Basics",
+        "REST APIs",
+        "Network Automation",
+        "CI/CD Pipeline"
+      ],
+      "trainer": "DevNet Expert",
+      "price": "$550"
+    }
+  ],
+  "WebDevelopment": [
+    {
+      "id": "html",
+      "name": "HTML & CSS Fundamentals",
+      "category": "WebDevelopment",
+      "duration": "2 months",
+      "level": "Beginner",
+      "description": "Learn web design with HTML and CSS",
+      "features": [
+        "Responsive Design",
+        "Modern CSS",
+        "Project Based",
+        "Career Support"
+      ],
+      "syllabus": [
+        "HTML5 Basics",
+        "CSS3 Properties",
+        "Flexbox & Grid",
+        "Responsive Design"
+      ],
+      "trainer": "Web Design Expert",
+      "price": "$300"
+    },
+    {
+      "id": "javascript",
+      "name": "JavaScript Full Stack",
+      "category": "WebDevelopment",
+      "duration": "4 months",
+      "level": "Intermediate",
+      "description": "Complete JavaScript programming course",
+      "features": [
+        "ES6+ Concepts",
+        "DOM Manipulation",
+        "AJAX & APIs",
+        "Real Projects"
+      ],
+      "syllabus": [
+        "JavaScript Fundamentals",
+        "DOM & Events",
+        "Async Programming",
+        "Popular Libraries"
+      ],
+      "trainer": "Full Stack Developer",
+      "price": "$400"
+    },
+    {
+      "id": "nodejs",
+      "name": "Node.js Backend Development",
+      "category": "WebDevelopment",
+      "duration": "3 months",
+      "level": "Intermediate",
+      "description": "Server-side development with Node.js",
+      "features": [
+        "Express Framework",
+        "Database Integration",
+        "REST APIs",
+        "Deployment"
+      ],
+      "syllabus": [
+        "Node.js Fundamentals",
+        "Express.js",
+        "MongoDB Integration",
+        "Authentication & Security"
+      ],
+      "trainer": "Backend Developer",
+      "price": "$450"
+    }
+  ]
+}
